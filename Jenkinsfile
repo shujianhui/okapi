@@ -10,12 +10,11 @@ buildMvn {
   doDocker = { 
     buildJavaDocker {
       dockerDir = 'okapi-core'
-      baseImage = 'folioci/openjdk8-jre-alpine'
-      overrideConfig  = 'yes'
+      overrideConfig  = 'no'
       publishMaster = 'no'
-      healthCheck = 'yes'
-      runArgs = 'dev'
+      healthChk = 'yes'
       healthChkCmd = 'curl --fail http://localhost:9130/_/proxy/health || exit 1'
+      runArgs = 'dev'
     }
   }
 }
