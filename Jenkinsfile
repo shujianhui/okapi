@@ -13,6 +13,9 @@ buildMvn {
       baseImage = 'folioci/openjdk8-jre-alpine'
       overrideConfig  = 'yes'
       publishMaster = 'no'
+      healthCheck = 'yes'
+      runArgs = 'dev'
+      healthChkCmd = 'curl --fail http://localhost:9130/_/proxy/health || exit 1'
     }
   }
 }
