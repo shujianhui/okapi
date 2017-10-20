@@ -8,7 +8,7 @@ buildMvn {
   publishAPI = 'yes'
   mvnDeploy = 'yes'
 
-  buildJavaDocker {
+  buildJavaDocker = {
     dockerDir = 'okapi-core'
     baseImage = 'folioci/openjdk8-jre-alpine'
     overrideRepoConfig  = 'yes'
