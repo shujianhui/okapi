@@ -11,10 +11,9 @@ buildMvn {
     buildJavaDocker {
       dockerDir = 'okapi-core'
       baseImage = 'folioci/openjdk8-jre-alpine'
-      overrideRepoConfig  = 'yes'
+      overrideConfig  = 'yes'
       publishMaster = 'no'
     }
   }
- 
 }
 
